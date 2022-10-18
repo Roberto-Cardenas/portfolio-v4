@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block headTags %}
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/contact.css') }}">
+{% endblock %}
+
+{% block nav %}
+  <li><a href="{{ url_for('home_bp.index') }}">Home</a></li>
+  <li><a href="{{ url_for('projects_bp.index') }}">Projects</a></li>
+  <li><a href="{{ url_for('contact_bp.index') }}" class="active">Contact</a></li>
+  <li><a href="{{ url_for('about_bp.index') }}">About</a></li>
+{% endblock %}
+
+{% block content %}
+  <div class="contact panel">
+    <img class="contact-bg" src="{{ url_for('static', filename='images/contactSplash.png') }}">
+    <div class="contact-panel">
+      <img class="title" src="{{ url_for('static', filename='icons/contact.svg') }}">
+      <form class="contact-form">
+        <div>
+          <input id="name" type="text">
+          <label for="name">Name</label>
+        </div>
+
+        <div>
+          <input id="email" type="email">
+          <label for="email">Email</label>
+        </div>
+
+        <div>
+          <input id="subject" type="text">
+          <label for="subject">Subject</label>
+        </div>
+
+        <div class="text-input">
+          <textarea id="message"></textarea>
+          <label for="message">Message</label>
+        </div>
+        <input type="submit" value="Send Message!">
+      </form>
+
+      <input id="submit-form-phone"  type="submit" value="Send Message!">
+    </div>
+  </div>
+{% endblock %}

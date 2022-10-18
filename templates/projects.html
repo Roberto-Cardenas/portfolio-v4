@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block headTags %}
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/projects.css') }}">
+{% endblock %}
+
+{% block nav %}
+  <li><a href="{{ url_for('home_bp.index') }}" >Home</a></li>
+  <li><a href="{{ url_for('projects_bp.index') }}"class="active">Projects</a></li>
+  <li><a href="{{ url_for('contact_bp.index') }}">Contact</a></li>
+  <li><a href="{{ url_for('about_bp.index') }}">About</a></li>
+{% endblock %}
+
+{% block content %}
+  <!-- Title -->
+  <div id="title-card" class="panel">
+    <img class="title-bg" src="{{ url_for('static', filename='images/projectsSplash.png') }}">
+    <div class="title-panel">
+      <img class="title" src="{{ url_for('static', filename='icons/projects.svg') }}">
+    </div>
+  </div>
+
+  <!-- Projects -->
+  <div id="projects">
+    {% for id in range(projects|length): %}
+      <a href="{{ url_for('projects_bp.show', project_id=id) }}" class="project panel">
+        <img src="{{ url_for('static', filename='images/' + projects[id]['thumbnail']) }}">
+        <div class="overlay">
+          <h3 class="title">{{ projects[id]['title'] }}</h3>
+          <div class="languages">
+            {% for icon in projects[id]['languageIcons']: %}
+              <img src="{{ url_for('static', filename='icons/' + icon) }}">
+            {% endfor %}
+          </div>
+          <p class="description">
+            {{ projects[id]['shortDescription'] }}
+          </p>
+        </div>
+      </a>
+    {% endfor %}
+  </div>
+{% endblock %}

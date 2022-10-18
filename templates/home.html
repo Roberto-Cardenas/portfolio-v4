@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+<!-- HTML head tags -->
+{% block headTags %}
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+{% endblock %}
+
+<!-- Nav bar -->
+{% block nav %}
+  <li><a href="{{ url_for('home_bp.index') }}" class="active">Home</a></li>
+  <li><a href="{{ url_for('projects_bp.index') }}">Projects</a></li>
+  <li><a href="{{ url_for('contact_bp.index') }}">Contact</a></li>
+  <li><a href="{{ url_for('about_bp.index') }}">About</a></li>
+{% endblock %}
+
+<!-- Content -->
+{% block content %}
+  <!-- Hero -->
+  <div id="hero" class="panel hero">
+    <img src="{{ url_for('static', filename='images/homeSplash.png') }}">
+    <div class="text-panel header">
+      <h1>Hi, I'm Roberto</h1>
+      <h1>An Aspiring Web Developer</h1>
+    </div>
+    <div class="text-panel subheader">
+      <h3>Lets build something together</h3>
+    </div>
+  </div>
+
+  <!-- Projects C2A -->
+  <div id="projects-btn" class="panel btn primary">
+    <a href="{{ url_for('projects_bp.index') }}">
+      <img class="default" src="{{ url_for('static', filename='images/projectsBtn.png') }}">
+      <img class="active" src="{{ url_for('static', filename='images/projectsBtnActive.jpg') }}">
+      <div class="text-panel projects-title">
+        <h3>Projects</h3>
+      </div>
+    </a>
+  </div>
+
+  <!-- Contact C2A -->
+  <div id="contact-btn" class="panel btn">
+    <a href="{{ url_for('contact_bp.index') }}">
+      <img class="default" src="{{ url_for('static', filename='images/contactBtn.png') }}">
+      <img class="active" src="{{ url_for('static', filename='images/contactBtnActive.jpg') }}">
+      <div class="text-panel contact-title">
+        <h3>Contact</h3>
+      </div>
+    </a>
+  </div>
+
+  <!-- About C2A -->
+  <div id="about-btn" class="panel btn">
+    <a href="{{ url_for('about_bp.index') }}">
+      <img class="default" src="{{ url_for('static', filename='images/aboutBtn.png') }}">
+      <img class="active" src="{{ url_for('static', filename='images/aboutBtnActive.png') }}">
+      <div class="text-panel about-title">
+        <h3>About</h3>
+      </div>
+    </a>
+  </div>
+{% endblock %}

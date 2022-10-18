@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100;400;500;600;700&family=Bungee&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="{{ url_for('static', filename='js/nav.js') }}"></script>
+  {% block headTags %}{% endblock %}
+  <title>Roberto Cárdenas Web Portfolio</title>
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <a href="{{ url_for('home_bp.index') }}" class="logo">Roberto Cardenas <span>Web Portfolio</span></a>
+      <nav>
+        <svg class="close" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M9.76158 12.1183L0.333252 2.69001L2.68992 0.333344L12.1183 9.76168L21.5466 0.333344L23.9033 2.69001L14.4749 12.1183L23.9033 21.5467L21.5466 23.9033L12.1183 14.475L2.68992 23.9033L0.333252 21.5467L9.76158 12.1183Z" fill="black"/>
+        </svg>          
+        <ul>
+          {% block nav %}{% endblock %}
+        </ul>
+      </nav>
+      <svg class="menu" width="32" height="25" viewBox="0 0 32 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M32 5.00001V0.200012H0V5.00001H32ZM32 14.6V9.80001H0V14.6H32ZM32 24.2V19.4H0V24.2H32Z" fill="black"/>
+      </svg>
+    </header>
+    <main>
+      <div id="page">
+        {% block content %}{% endblock %}
+      </div>
+    </main>
+    <footer><p>Copyright @ Roberto Cardenas 2022</p></footer>
+  </div>
+</body>
+</html>

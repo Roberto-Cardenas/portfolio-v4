@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+
+{% block headTags %}
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/about.css') }}">
+{% endblock %}
+
+{% block nav %}
+  <li><a href="{{ url_for('home_bp.index') }}">Home</a></li>
+  <li><a href="{{ url_for('projects_bp.index') }}">Projects</a></li>
+  <li><a href="{{ url_for('contact_bp.index') }}">Contact</a></li>
+  <li><a href="{{ url_for('about_bp.index') }}" class="active">About</a></li>
+{% endblock %}
+
+{% block content %}
+  <img class="splash" src="{{ url_for('static', filename='images/aboutSplash.JPG') }}" >
+  <div class="content">
+    <!-- Title -->
+    <div class="panel title">
+      <img src="{{ url_for('static', filename='icons/about.svg') }}">
+    </div>
+
+    <!-- Paragraphs -->
+    <div class="paragraphs panel">
+      <div class="paragraph">
+        <h3>Who am I?</h3>
+        <p>Hi, my name is Roberto Cardenas. I am an aspiring web developer soon to graduate from UC Berkeley with a BA in Computer Science. I am originally from Rosarito, Mexico but have been living in Berkeley, CA for the last 3 years of my life. I have experience building full sites and web applications in PHP, Rails, CSS, HTML, and JavaScript.</p>
+      </div>
+      <div class="paragraph">
+        <h3>What am I interested in?</h3>
+        <p>I enjoy imagining projects from scratch and being a part of the whole creative process, so I am most interested in companies that build custom sites. I am also interested and fully capable in working as a freelancer.</p>
+      </div>
+    </div>
+
+    <!-- Links -->
+    <div class="links">
+      <a href="https://www.linkedin.com/in/roberto-cardenas-2a3642236/" class="about-link btn">
+        <img class="default" src="{{ url_for('static', filename='images/linkedinBtn.png') }}">
+        <div class="active">
+          <img src="{{ url_for('static', filename='images/linkedinBtnActive.jpg') }}">
+          <div class="overlay">
+            <h4 class="link-title">Linkedin</h4>
+            <div class="arrow">
+              <img src="{{ url_for('static', filename='icons/linkarrow.svg') }}">
+            </div>
+          </div>
+        </div>
+      </a>
+      <a href="https://github.com/Roberto-Cardenas" class="about-link btn">
+        <img class="default" src="{{ url_for('static', filename='images/githubBtn.png') }}">
+        <div class="active">
+          <img src="{{ url_for('static', filename='images/githubBtnActive.jpg') }}">
+          <div class="overlay">
+            <h4 class="link-title">Github</h4>
+            <div class="arrow">
+              <img src="{{ url_for('static', filename='icons/linkarrow.svg') }}">
+            </div>
+          </div>
+        </div>
+      </a>
+      <a class="about-link btn">
+        <img class="default" src="{{ url_for('static', filename='images/resumeBtn.png') }}">
+        <div class="active">
+          <img src="{{ url_for('static', filename='images/resumeBtnActive.jpg') }}">
+          <div class="overlay">
+            <h4 class="link-title">Resume</h4>
+            <div class="arrow">
+              <img src="{{ url_for('static', filename='icons/linkarrow.svg') }}">
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,187 @@
+#page {
+  display: flex;
+  flex-direction: column;
+  margin: 0.5em 0;
+}
+
+.panel {
+  position: relative;
+  width: 100%;
+  margin: 0.3em 0;
+}
+.panel img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.panel.hero {
+  height: 20em;
+}
+.panel.btn {
+  height: 7em;
+}
+.panel.btn.primary {
+  height: 10em;
+}
+.panel .text-panel {
+  position: absolute;
+  padding: 0.5em 1em;
+}
+.panel .text-panel h1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.panel .text-panel h3 {
+  font-size: 1rem;
+  font-weight: 500;
+}
+.panel .header {
+  top: 4px;
+  left: 4px;
+}
+.panel .subheader {
+  bottom: 4px;
+  right: 4px;
+}
+.panel .projects-title {
+  bottom: 4px;
+  left: 4px;
+}
+.panel .contact-title {
+  bottom: 4px;
+  right: 4px;
+}
+.panel .about-title {
+  bottom: 4px;
+  left: 4px;
+}
+.panel#about-btn img {
+  -o-object-position: 50% 0%;
+     object-position: 50% 0%;
+}
+
+@media only screen and (min-width: 680px) {
+  #page {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    -moz-column-gap: 20px;
+         column-gap: 20px;
+    row-gap: 20px;
+    grid-template-areas: "hero hero hero hero" "contact projects projects about";
+    margin: 0.5em 0;
+    margin-bottom: 2em;
+  }
+  .panel {
+    margin: 0;
+  }
+  .panel.hero {
+    height: 50vh;
+  }
+  .panel.btn {
+    height: 40vh;
+  }
+  .panel.btn.primary {
+    height: 40vh;
+  }
+  .panel.btn .text-panel {
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    text-align: center;
+    transform: translateY(15px);
+  }
+  .panel.btn#about-btn img {
+    -o-object-position: 48% 0%;
+       object-position: 48% 0%;
+  }
+  .panel .text-panel h1 {
+    font-size: 1.5rem;
+  }
+  .panel .text-panel h3 {
+    font-size: 1rem;
+  }
+  .panel .projects-title {
+    width: 4rem;
+  }
+  .panel .contact-title {
+    width: 3rem;
+  }
+  .panel .about-title {
+    width: 3rem;
+  }
+  #hero {
+    grid-area: hero;
+  }
+  #projects-btn {
+    grid-area: projects;
+  }
+  #contact-btn {
+    grid-area: contact;
+    transform: translateY(10px);
+  }
+  #about-btn {
+    grid-area: about;
+    transform: translateY(10px);
+  }
+}
+@media only screen and (min-width: 1024px) {
+  #page {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "hero hero hero hero projects projects" "hero hero hero hero contact about";
+    margin: 0.5em 0;
+    margin-bottom: 1em;
+  }
+  .panel.hero {
+    height: 85vh;
+  }
+  .panel.btn {
+    height: 100%;
+  }
+  .panel.btn.primary {
+    height: 90%;
+  }
+  .panel.btn.primary .text-panel {
+    padding: 0.5em 1.5em;
+  }
+  .panel.btn .text-panel {
+    padding: 0.3em 1.5em;
+    transform: translateY(50%);
+  }
+  .panel .text-panel {
+    padding: 0.8em 1.5em;
+  }
+  .panel .text-panel h1 {
+    font-size: 2.3rem;
+  }
+  .panel .text-panel h3 {
+    font-size: 1.3rem;
+  }
+  .panel .projects-title {
+    width: 5rem;
+  }
+  .panel .contact-title {
+    width: 4rem;
+  }
+  .panel .about-title {
+    width: 4rem;
+  }
+  .panel .header {
+    top: 6px;
+    left: 6px;
+  }
+  .panel .subheader {
+    bottom: 6px;
+    right: 6px;
+  }
+  #contact-btn {
+    transform: translateY(-1.05em);
+  }
+  #about-btn {
+    transform: translateY(-1.05em);
+  }
+}/*# sourceMappingURL=home.css.map */

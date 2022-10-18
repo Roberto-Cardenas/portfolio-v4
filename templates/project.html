@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block headTags %}
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/project.css') }}">
+{% endblock %}
+
+{% block nav %}
+  <li><a href="{{ url_for('home_bp.index') }}" >Home</a></li>
+  <li><a href="{{ url_for('projects_bp.index') }}"class="active">Projects</a></li>
+  <li><a href="{{ url_for('contact_bp.index') }}">Contact</a></li>
+  <li><a href="{{ url_for('about_bp.index') }}">About</a></li>
+{% endblock %}
+
+{% block content %}
+  <!-- Splash -->
+  <div id="project-splash" class="panel">
+    <img src="{{ url_for('static', filename='images/'+project['thumbnail']) }}">
+    <a class="back-btn" href="{{ url_for('projects_bp.index') }}">
+      <img src="{{ url_for('static', filename='icons/backarrow.svg') }}" alt="Return to Projects">
+    </a>
+    <h2 class="project-title">{{ project['title'] }}</h2>
+  </div>
+
+  <!-- Description -->
+  <div id="project-description">
+    <h3>Description</h3>
+    <p>{{ project['description'] }}</p>
+    <p>{{ project['description2'] }}</p>
+  </div>
+
+  <!-- Links -->
+  <div id="project-links">
+    <a href="{{ project['github'] }}" target="_blank" class="project-link btn">
+      <img class="default" src="{{ url_for('static', filename='images/githubBtn.png') }}">
+      <div class="active">
+        <img src="{{ url_for('static', filename='images/githubBtnActive.jpg') }}">
+        <div class="overlay">
+          <h4 class="link-title">Check out the code!</h4>
+        </div>
+      </div>
+    </a>
+    <a href="{{ project['website'] }}" target="_blank" class="project-link btn">
+      <img class="default" src="{{ url_for('static', filename='images/goToSiteBtn.png') }}">
+      <div class="active">
+        <img src="{{ url_for('static', filename='images/goToSiteBtnActive.jpg') }}">
+        <div class="overlay">
+          <h4 class="link-title">Check out the site!</h4>
+        </div>
+      </div>
+    </a>
+  </div>
+{% endblock %}

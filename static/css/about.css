@@ -1,0 +1,175 @@
+#page {
+  display: flex;
+  flex-direction: column;
+  margin: 0.5em 0;
+}
+
+.splash {
+  border: 3px solid black;
+  width: 100%;
+  height: auto;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 1em;
+  background-image: url(../images/aboutHalftone.png);
+  background-size: cover;
+}
+.title img {
+  width: 12em;
+  outline: none;
+}
+
+.panel {
+  margin: 0.5em 0;
+  border: 3px solid black;
+}
+
+.paragraphs {
+  padding: 0.8em 0.5em;
+}
+.paragraphs .paragraph:first-child {
+  margin-bottom: 1em;
+}
+.paragraphs .paragraph h3 {
+  line-height: 140%;
+  font-size: 1.5rem;
+}
+.paragraphs .paragraph p {
+  line-height: 130%;
+  font-size: 1.3rem;
+}
+
+.links {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  -moz-column-gap: 12px;
+       column-gap: 12px;
+  width: 100%;
+  height: 6em;
+}
+.links .about-link {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  border: 3px solid black;
+  color: black;
+}
+.links .about-link img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.links .about-link .overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.3s linear;
+}
+.links .about-link .overlay .arrow {
+  width: 1em;
+  height: 1em;
+}
+.links .about-link .overlay .arrow img {
+  width: inherit;
+  height: inherit;
+}
+.links .about-link .overlay .link-title {
+  font-family: "Bungee", cursive;
+  text-shadow: 1px 1px white, -1px 1px white, 1px -1px white, -1px -1px white;
+  font-size: 0.9rem;
+}
+
+@media only screen and (min-width: 680px) {
+  .title img {
+    width: 18em;
+    outline: none;
+  }
+  .paragraphs {
+    padding: 1.5em 1em;
+  }
+  .paragraphs .paragraph:first-child {
+    margin-bottom: 1.5em;
+  }
+  .paragraphs .paragraph h3 {
+    font-size: 1.5rem;
+  }
+  .paragraphs .paragraph p {
+    font-size: 1.5rem;
+  }
+  .links {
+    height: 10em;
+  }
+  .links .about-link .overlay .arrow {
+    width: 1.5em;
+    height: 1.5em;
+  }
+  .links .about-link .overlay .link-title {
+    font-family: "Bungee", cursive;
+    text-shadow: 1.5px 1.5px white, -1.5px 1.5px white, 1.5px -1.5px white, -1.5px -1.5px white, 1.5px 0 white, 0 1.5px white, -1.5px 0 white, 0 -1.5px white;
+    font-size: 1.5rem;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  #page {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    -moz-column-gap: 20px;
+         column-gap: 20px;
+  }
+  .splash {
+    width: 100%;
+    height: 85vh;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .content {
+    height: 100%;
+  }
+  .panel:first-child {
+    margin: 0;
+  }
+  .title {
+    height: 15%;
+  }
+  .paragraphs {
+    height: 60%;
+    box-sizing: border-box;
+    padding: 1.5em 1.5em;
+  }
+  .paragraphs .paragraph:first-child {
+    margin-bottom: 2em;
+  }
+  .paragraphs .paragraph h3 {
+    font-size: 1.4rem;
+  }
+  .paragraphs .paragraph p {
+    font-size: 1.2rem;
+  }
+  .links {
+    height: calc(25% - 1em);
+  }
+  .links .about-link .overlay .link-title {
+    font-size: 1.3rem;
+  }
+}
+@media only screen and (min-width: 1250px) {
+  .paragraphs .paragraph h3 {
+    font-size: 1.5rem;
+  }
+  .paragraphs .paragraph p {
+    font-size: 1.3rem;
+  }
+}/*# sourceMappingURL=about.css.map */

@@ -1,0 +1,127 @@
+#page {
+  display: flex;
+  flex-direction: column;
+  margin: 0.5em 0;
+}
+
+.panel {
+  position: relative;
+  width: 100%;
+}
+.panel img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.panel#title-card {
+  height: 20em;
+  width: calc(100% + 2em);
+  transform: translateX(-1em);
+  border-top: 3px solid black;
+  border-bottom: 3px solid black;
+}
+.panel#title-card img {
+  outline: none;
+}
+.panel#title-card .title-panel {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.panel#title-card .title-panel .title {
+  border: none;
+  width: 20em;
+  height: auto;
+}
+
+#projects {
+  margin-top: 1em;
+}
+#projects .project {
+  display: block;
+  cursor: pointer;
+  color: black;
+  margin: 1em 0;
+  width: 100%;
+  height: 16em;
+}
+#projects .project .overlay {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: calc(100% - 2em);
+  height: calc(100% - 2em);
+  padding: 1em;
+  outline: 3px solid black;
+  outline-offset: -3px;
+  transition: background-color 0.5s;
+}
+#projects .project .overlay:hover {
+  background-color: white;
+}
+#projects .project .overlay:hover .languages {
+  opacity: 1;
+}
+#projects .project .overlay:hover .description {
+  opacity: 1;
+}
+#projects .project .overlay .title {
+  font-size: 1.6rem;
+  text-shadow: 1px 1px white, -1px 1px white, 1px -1px white, -1px -1px white;
+}
+#projects .project .overlay .languages {
+  display: flex;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+#projects .project .overlay .languages img {
+  position: relative;
+  outline: none;
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: auto;
+  height: 3em;
+  margin: 0.5em;
+}
+#projects .project .overlay .languages img:first-child {
+  margin-left: 0;
+}
+#projects .project .overlay .description {
+  opacity: 0;
+  transition: opacity 0.5s;
+  font-size: 1.2rem;
+}
+
+@media only screen and (min-width: 680px) {
+  #projects {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    -moz-column-gap: 20px;
+         column-gap: 20px;
+    row-gap: 20px;
+  }
+  #projects .project {
+    margin: 0;
+  }
+  .panel#title-card {
+    width: 100%;
+    border: none;
+    transform: translateX(0);
+  }
+  .panel#title-card img.title-bg {
+    outline: 3px solid black;
+    outline-offset: -3px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  #projects {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}/*# sourceMappingURL=projects.css.map */

@@ -1,0 +1,164 @@
+#page {
+  display: flex;
+  flex-direction: column;
+  margin: 0.5em 0;
+}
+
+.panel {
+  position: relative;
+  width: 100%;
+}
+.panel img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.panel#project-splash {
+  height: 35em;
+  width: calc(100% + 2em);
+  transform: translateX(-1em);
+  border-top: 3px solid black;
+  border-bottom: 3px solid black;
+}
+.panel#project-splash img {
+  outline: none;
+}
+.panel#project-splash .back-btn {
+  position: absolute;
+  width: 2em;
+  height: 2em;
+  right: 1em;
+  top: 1em;
+  box-sizing: border-box;
+  background-color: white;
+  border: 2px solid black;
+  padding: 0.3em;
+}
+.panel#project-splash .project-title {
+  position: absolute;
+  bottom: 1em;
+  left: 0.7em;
+  font-size: 1.5rem;
+  font-family: "Bungee", cursive;
+  text-shadow: 1.5px 1.5px white, -1.5px 1.5px white, 1.5px -1.5px white, -1.5px -1.5px white, 1.5px 0 white, 0 1.5px white, -1.5px 0 white, 0 -1.5px white;
+}
+
+#project-description {
+  margin: 0.5em 0;
+  padding: 0.5em;
+  border: 3px solid black;
+}
+#project-description h3 {
+  font-size: 1.5rem;
+}
+#project-description p {
+  margin: 0.5em 0;
+  line-height: 140%;
+  font-size: 1.3rem;
+}
+
+#project-links {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  -moz-column-gap: 12px;
+       column-gap: 12px;
+  width: 100%;
+  height: 8em;
+}
+#project-links .project-link {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  border: 3px solid black;
+  color: black;
+}
+#project-links .project-link img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#project-links .project-link .overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 1em;
+  text-align: center;
+  opacity: 1;
+}
+#project-links .project-link .overlay .link-title {
+  font-family: "Bungee", cursive;
+  text-shadow: 1px 1px white, -1px 1px white, 1px -1px white, -1px -1px white;
+}
+
+@media only screen and (min-width: 680px) {
+  #page {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: auto;
+    -moz-column-gap: 20px;
+         column-gap: 20px;
+    row-gap: 20px;
+    grid-template-areas: "splash splash splash splash splash splash splash splash" "description description description description description links links links";
+  }
+  #project-splash {
+    grid-area: splash;
+  }
+  #project-description {
+    grid-area: description;
+    margin: 0;
+    padding: 1em;
+    height: 35vh;
+  }
+  #project-description h3 {
+    margin-bottom: 0.6em;
+    font-size: 1.6rem;
+  }
+  #project-description p {
+    margin: 0.5em 0;
+    font-size: 1.3rem;
+  }
+  #project-links {
+    grid-area: links;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  #project-links .project-link:first-child {
+    margin-bottom: 1em;
+  }
+  .panel#project-splash {
+    height: 50vh;
+    width: 100%;
+    transform: translateX(0);
+    border: 3px solid black;
+    box-sizing: border-box;
+  }
+  .panel#project-splash .project-title {
+    left: 0.5em;
+    bottom: 0.3em;
+    font-size: 2rem;
+  }
+  .panel#project-splash .back-btn {
+    width: 2.5em;
+    height: 2.5em;
+    padding: 0.5em;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .panel#project-splash {
+    height: 44vh;
+  }
+  #project-links .project-link .overlay .link-title {
+    font-size: 1.3rem;
+  }
+}/*# sourceMappingURL=project.css.map */

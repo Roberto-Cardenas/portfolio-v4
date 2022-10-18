@@ -1,0 +1,159 @@
+#page {
+  display: flex;
+  flex-direction: column;
+  margin: 0.5em 0;
+}
+
+.panel {
+  position: relative;
+  width: 100%;
+}
+.panel .contact-bg {
+  position: absolute;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 0%;
+     object-position: 0%;
+  width: calc(100% + 2em);
+  height: 100%;
+  transform: translateX(-1em);
+  border-top: 3px solid black;
+  border-bottom: 3px solid black;
+}
+.panel.contact {
+  height: 100vh;
+}
+.panel.contact img {
+  outline: none;
+}
+.panel .contact-panel {
+  position: absolute;
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+  padding: 2em 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.panel .contact-panel .title {
+  position: relative;
+  width: 18em;
+  height: auto;
+}
+.panel .contact-panel .contact-form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.panel .contact-panel .contact-form div {
+  display: flex;
+  flex-direction: column-reverse;
+  width: 100%;
+  margin: 0.2em 0;
+}
+.panel .contact-panel .contact-form div label {
+  font-size: 1.3rem;
+  color: white;
+  text-shadow: 1.5px 1.5px black, -1.5px 1.5px black, 1.5px -1.5px black, -1.5px -1.5px black, 1.5px 0 black, 0 1.5px black, -1.5px 0 black, 0 -1.5px black;
+  margin: 0.2em 0;
+}
+.panel .contact-panel .contact-form div textarea {
+  min-width: 100%;
+  max-width: 100%;
+  max-height: 12em;
+  min-height: 12em;
+}
+.panel .contact-panel .contact-form div input[type=text],
+.panel .contact-panel .contact-form div input[type=email],
+.panel .contact-panel .contact-form div textarea {
+  box-sizing: border-box;
+  outline: 2px solid black;
+  outline-offset: -2px;
+  padding: 0.5em;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 1rem;
+}
+.panel .contact-panel .contact-form div input[type=text]:focus,
+.panel .contact-panel .contact-form div input[type=email]:focus,
+.panel .contact-panel .contact-form div textarea:focus {
+  outline: 3px solid black;
+  outline-offset: -3px;
+}
+.panel .contact-panel .contact-form div input[type=text]:focus + label,
+.panel .contact-panel .contact-form div input[type=email]:focus + label,
+.panel .contact-panel .contact-form div textarea:focus + label {
+  text-shadow: 2px 2px black, -2px 2px black, 2px -2px black, -2px -2px black, 2px 0 black, 0 2px black, -2px 0 black, 0 -2px black;
+}
+.panel .contact-panel .contact-form input[type=submit] {
+  display: none;
+}
+.panel .contact-panel input[type=submit] {
+  width: 80%;
+  padding: 1em 1.5em;
+  border: none;
+  cursor: pointer;
+  font-family: "Bungee", cursive;
+  font-size: 1rem;
+  color: white;
+  background-color: #2F2F2F;
+}
+.panel .contact-panel input[type=submit]:hover {
+  background-color: black;
+}
+
+@media only screen and (min-width: 680px) {
+  .panel {
+    border: 3px solid black;
+    box-sizing: border-box;
+  }
+  .panel.contact {
+    height: 86vh;
+  }
+  .panel .contact-bg {
+    width: calc(100% - 3em);
+    transform: translateX(3em);
+    border: none;
+  }
+  .panel .contact-panel .title {
+    position: absolute;
+    top: 13em;
+    left: -11em;
+    width: 28em;
+    height: auto;
+    transform: rotate(270deg);
+  }
+  .panel .contact-panel .contact-form {
+    position: absolute;
+    right: 3em;
+    bottom: 3em;
+    width: 20em;
+    align-items: end;
+  }
+  .panel .contact-panel .contact-form input[type=submit] {
+    display: block;
+    margin-top: 3em;
+  }
+  #submit-form-phone {
+    display: none;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .panel .contact-bg {
+    width: calc(100% - 4em);
+    transform: translateX(4em);
+  }
+  .panel .contact-panel .title {
+    top: 15em;
+    left: -12em;
+    width: 32em;
+  }
+  .panel .contact-panel .contact-form {
+    right: 4em;
+    bottom: 4em;
+    width: 25em;
+  }
+}/*# sourceMappingURL=contact.css.map */
