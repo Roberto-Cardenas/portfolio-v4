@@ -7,7 +7,7 @@
 {% block nav %}
   <li><a href="{{ url_for('home_bp.index') }}">Home</a></li>
   <li><a href="{{ url_for('projects_bp.index') }}">Projects</a></li>
-  <li><a href="{{ url_for('contact_bp.index') }}" class="active">Contact</a></li>
+  <li><a href="{{ url_for('contact') }}" class="active">Contact</a></li>
   <li><a href="{{ url_for('about_bp.index') }}">About</a></li>
 {% endblock %}
 
@@ -16,7 +16,7 @@
     <img class="contact-bg" src="{{ url_for('static', filename='images/contactSplash.png') }}">
     <div class="contact-panel">
       <img class="title" src="{{ url_for('static', filename='icons/contact.svg') }}">
-      <form class="contact-form">
+      <form class="contact-form" method="POST">
         <div>
           <input id="name" type="text">
           <label for="name">Name</label>

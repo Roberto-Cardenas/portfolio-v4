@@ -8,7 +8,7 @@
 {% block nav %}
   <li><a href="{{ url_for('home_bp.index') }}" class="active">Home</a></li>
   <li><a href="{{ url_for('projects_bp.index') }}">Projects</a></li>
-  <li><a href="{{ url_for('contact_bp.index') }}">Contact</a></li>
+  <li><a href="{{ url_for('contact') }}">Contact</a></li>
   <li><a href="{{ url_for('about_bp.index') }}">About</a></li>
 {% endblock %}
 
@@ -39,7 +39,7 @@
 
   <!-- Contact C2A -->
   <div id="contact-btn" class="panel btn">
-    <a href="{{ url_for('contact_bp.index') }}">
+    <a href="{{ url_for('contact') }}">
       <img class="default" src="{{ url_for('static', filename='images/contactBtn.png') }}">
       <img class="active" src="{{ url_for('static', filename='images/contactBtnActive.jpg') }}">
       <div class="text-panel contact-title">
