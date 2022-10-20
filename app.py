@@ -26,7 +26,7 @@ def contact():
     msg = Message(form.subject.data, 
                   sender='robertocardenasportfolio@gmail.com', 
                   recipients=['robertocardenas@berkeley.edu'])
-    msg.body = f"Email: {{ form.email.data }}. Name: {{ form.name.data }}. Message: {{ form.data.message }}"
+    msg.body = "Email: " + form.email.data + ". Name: " + form.name.data + ". Message: " + form.message.data
     mail.send(msg)
 
   return render_template("contact.html", form=form)
