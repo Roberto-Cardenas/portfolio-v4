@@ -1,4 +1,4 @@
-from flask import Flask, render_template, url_for, request
+from flask import Flask, render_template, url_for, request, redirect
 from flask_mail import Mail, Message
 from forms import ContactForm
 from home import home_bp
