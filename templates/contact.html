@@ -2,6 +2,7 @@
 
 {% block headTags %}
   <link rel="stylesheet" href="{{ url_for('static', filename='css/contact.css') }}">
+  <script src="{{ url_for('static', filename='js/contact.js') }}"></script>
 {% endblock %}
 
 {% block nav %}
@@ -17,24 +18,25 @@
     <div class="contact-panel">
       <img class="title" src="{{ url_for('static', filename='icons/contact.svg') }}">
       <form class="contact-form" method="POST">
+        {{ form.csrf_token }}
         <div>
-          <input id="name" type="text">
-          <label for="name">Name</label>
+          {{ form.name }}
+          {{ form.name.label }}
         </div>
 
         <div>
-          <input id="email" type="email">
-          <label for="email">Email</label>
+          {{ form.email }}
+          {{ form.email.label }}
         </div>
 
         <div>
-          <input id="subject" type="text">
-          <label for="subject">Subject</label>
+          {{ form.subject }}
+          {{ form.subject.label }}
         </div>
 
         <div class="text-input">
-          <textarea id="message"></textarea>
-          <label for="message">Message</label>
+          {{ form.message }}
+          {{ form.message.label }}
         </div>
         <input type="submit" value="Send Message!">
       </form>

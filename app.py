@@ -1,5 +1,6 @@
 from flask import Flask, render_template, url_for, request
 from flask_mail import Mail, Message
+from forms import ContactForm
 from home import home_bp
 from projects import projects_bp
 from about import about_bp
@@ -20,9 +21,12 @@ app.register_blueprint(about_bp, url_prefix="/about")
 
 @app.route('/contact', methods=['GET', 'POST'])
 def contact():
-  if request.method == 'POST':
-    msg = Message("Hey", sender='robertocardenasportfolio@gmail.com', recipients=['robertocardenas@berkeley.edu'])
-    msg.body = "This is an email message"
+  form = ContactForm(request.form)
+  if request.method == 'POST' and form.validate():
+    msg = Message(form.subject.data, 
+                  sender='robertocardenasportfolio@gmail.com', 
+                  recipients=['robertocardenas@berkeley.edu'])
+    msg.body = f"Email: {{ form.email.data }}. Name: {{ form.name.data }}. Message: {{ form.data.message }}"
     mail.send(msg)
 
-  return render_template("contact.html")
+  return render_template("contact.html", form=form)
