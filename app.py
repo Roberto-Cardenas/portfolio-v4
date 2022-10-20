@@ -28,5 +28,6 @@ def contact():
                   recipients=['robertocardenas@berkeley.edu'])
     msg.body = "Email: " + form.email.data + ". Name: " + form.name.data + ". Message: " + form.message.data
     mail.send(msg)
+    return redirect(url_for('contact'))
 
   return render_template("contact.html", form=form)
