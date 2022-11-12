@@ -4,161 +4,218 @@
   margin: 0.5em 0;
 }
 
-.panel {
+p, ul {
+  line-height: 140%;
+}
+
+#splash {
   position: relative;
-  width: 100%;
-}
-.panel img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-.panel#project-splash {
-  height: 35em;
-  width: calc(100% + 2em);
+  width: 100vw;
   transform: translateX(-1em);
+  height: 15em;
+  border-right: none;
+  border-left: none;
+}
+#splash .splash-title {
+  position: absolute;
+  top: 50%;
+  left: 4em;
+  transform: translateX(-50%) translateY(-50%) rotate(-90deg);
+  width: calc(15em + 6px);
+  background-color: white;
   border-top: 3px solid black;
   border-bottom: 3px solid black;
 }
-.panel#project-splash img {
-  outline: none;
-}
-.panel#project-splash .back-btn {
+#splash .back-btn {
   position: absolute;
-  width: 2em;
-  height: 2em;
   right: 1em;
   top: 1em;
   box-sizing: border-box;
   background-color: white;
-  border: 2px solid black;
+  width: 2em;
+  height: 2em;
   padding: 0.3em;
+  border: 2px solid black;
 }
-.panel#project-splash .project-title {
-  position: absolute;
-  bottom: 1em;
-  left: 0.7em;
-  font-size: 1.5rem;
+
+#title h2 {
   font-family: "Bungee", cursive;
-  text-shadow: 1.5px 1.5px white, -1.5px 1.5px white, 1.5px -1.5px white, -1.5px -1.5px white, 1.5px 0 white, 0 1.5px white, -1.5px 0 white, 0 -1.5px white;
-}
-
-#project-description {
-  margin: 0.5em 0;
-  padding: 0.5em;
-  border: 3px solid black;
-}
-#project-description h3 {
-  font-size: 1.5rem;
-}
-#project-description p {
-  margin: 0.5em 0;
-  line-height: 140%;
   font-size: 1.3rem;
+  text-align: right;
 }
 
-#project-links {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  -moz-column-gap: 12px;
-       column-gap: 12px;
-  width: 100%;
-  height: 8em;
-}
-#project-links .project-link {
-  display: block;
-  position: relative;
-  width: 100%;
-  height: 100%;
-  box-sizing: border-box;
+.panel {
   border: 3px solid black;
-  color: black;
+  margin: 0.5em 0;
 }
-#project-links .project-link img {
-  position: absolute;
+.panel img {
+  outline: none;
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-#project-links .project-link .overlay {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  box-sizing: border-box;
-  padding: 1em;
-  text-align: center;
-  opacity: 1;
+.panel.text-panel {
+  padding: 0.8em 0.5em;
 }
-#project-links .project-link .overlay .link-title {
+.panel.text-panel h3 {
+  margin-bottom: 0.4em;
+}
+.panel.text-panel p {
+  margin-bottom: 0.3em;
+}
+.panel.text-panel ul {
+  margin-left: 1.5em;
+  margin-bottom: 0.3em;
+}
+.panel.img-panel {
+  display: flex;
+  flex-direction: row;
+}
+.panel.img-panel .image-title {
+  position: relative;
+  background-color: black;
+  width: 2.5em;
+}
+.panel.img-panel .image-title p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%) rotate(-90deg);
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
   font-family: "Bungee", cursive;
-  text-shadow: 1px 1px white, -1px 1px white, 1px -1px white, -1px -1px white;
+  color: white;
+  font-size: 0.9rem;
+}
+
+#description2 {
+  position: relative;
+  padding-bottom: 2.5em;
+}
+#description2 .links {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  box-sizing: border-box;
+  padding: 0 0.5em;
+  width: 100%;
+  height: 2em;
+  background-color: black;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: end;
+}
+#description2 .links a {
+  color: #DADADA;
+  margin: 0 0.3em;
+}
+#description2 .links a:last-child {
+  margin-right: 0;
+}
+#description2 .links a:hover {
+  color: white;
 }
 
 @media only screen and (min-width: 680px) {
   #page {
     display: grid;
-    grid-template-columns: repeat(8, 1fr);
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
-    -moz-column-gap: 20px;
-         column-gap: 20px;
-    row-gap: 20px;
-    grid-template-areas: "splash splash splash splash splash splash splash splash" "description description description description description links links links";
+    -moz-column-gap: 1em;
+         column-gap: 1em;
+    grid-template-areas: "splash splash" "description1 title" "description1 image1" "description1 image2" "description2 description2";
   }
-  #project-splash {
-    grid-area: splash;
+  .panel.text-panel {
+    padding: 1em 1em;
   }
-  #project-description {
-    grid-area: description;
-    margin: 0;
-    padding: 1em;
-    height: 35vh;
+  .panel.text-panel h3 {
+    margin-bottom: 0.2em;
+    font-size: 1.5rem;
   }
-  #project-description h3 {
-    margin-bottom: 0.6em;
-    font-size: 1.6rem;
+  .panel.text-panel p {
+    margin-bottom: 0.4em;
+    font-size: 1.1rem;
   }
-  #project-description p {
-    margin: 0.5em 0;
-    font-size: 1.3rem;
+  .panel.text-panel ul {
+    margin-bottom: 0.4em;
+    font-size: 1.1rem;
   }
-  #project-links {
-    grid-area: links;
+  .panel.img-panel {
     display: flex;
-    flex-direction: column;
-    height: 100%;
+    flex-direction: row;
   }
-  #project-links .project-link:first-child {
-    margin-bottom: 1em;
+  .panel.img-panel .image-title p {
+    font-size: 1rem;
   }
-  .panel#project-splash {
-    height: 50vh;
-    width: 100%;
+  #splash {
+    grid-area: splash;
+    width: auto;
     transform: translateX(0);
+    height: 26em;
     border: 3px solid black;
-    box-sizing: border-box;
   }
-  .panel#project-splash .project-title {
-    left: 0.5em;
-    bottom: 0.3em;
-    font-size: 2rem;
+  #splash .splash-title {
+    left: 5em;
+    width: calc(26em + 6px);
   }
-  .panel#project-splash .back-btn {
+  #splash .back-btn {
     width: 2.5em;
     height: 2.5em;
-    padding: 0.5em;
+    padding: 0.4em;
+    border: 3px solid black;
+  }
+  #description1 {
+    grid-area: description1;
+  }
+  #description2 {
+    grid-area: description2;
+  }
+  #description2 .links {
+    padding: 0 1em;
+    height: 2em;
+  }
+  #description2 .links a {
+    margin: 0 0.3em;
+  }
+  #title {
+    grid-area: title;
+  }
+  #title h2 {
+    font-size: 1.8rem;
+  }
+  #image1 {
+    grid-area: image1;
+  }
+  #image2 {
+    grid-area: image2;
   }
 }
 @media only screen and (min-width: 1024px) {
-  .panel#project-splash {
-    height: 44vh;
+  #page {
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-areas: "description1 description1 description1 description1 description1 splash splash splash splash splash splash splash" "description2 description2 description2 description2 description2 title title title title title title title" "description2 description2 description2 description2 description2 image1 image1 image1 image1 image1 image1 image1" "description2 description2 description2 description2 description2 image2 image2 image2 image2 image2 image2 image2";
   }
-  #project-links .project-link .overlay .link-title {
-    font-size: 1.3rem;
+  .panel.text-panel h3 {
+    font-size: 1.8rem;
+  }
+  .panel.text-panel p {
+    font-size: 1.4rem;
+  }
+  .panel.text-panel ul {
+    font-size: 1.4rem;
+  }
+  .panel.img-panel .image-title p {
+    font-size: 1.5rem;
+  }
+  #title h2 {
+    font-size: 2.5rem;
+  }
+  #splash .back-btn {
+    width: 3em;
+    height: 3em;
+    padding: 0.6em;
   }
 }/*# sourceMappingURL=project.css.map */

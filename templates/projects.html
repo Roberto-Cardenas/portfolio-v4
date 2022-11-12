@@ -24,7 +24,7 @@
   <div id="projects">
     {% for id in range(projects|length): %}
       <a href="{{ url_for('projects_bp.show', project_id=id) }}" class="project panel">
-        <img src="{{ url_for('static', filename='images/' + projects[id]['thumbnail']) }}">
+        <img src="{{ url_for('static', filename='images/' + projects[id]['thumbnail']['filename']) }}" alt="{{ projects[id]['thumbnail']['alt'] }}">
         <div class="overlay">
           <h3 class="title">{{ projects[id]['title'] }}</h3>
           <div class="languages">
