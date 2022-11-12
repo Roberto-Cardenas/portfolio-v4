@@ -72,6 +72,9 @@ p, ul {
   display: flex;
   flex-direction: row;
 }
+.panel.img-panel img {
+  width: calc(100% - 2.5em);
+}
 .panel.img-panel .image-title {
   position: relative;
   background-color: black;
