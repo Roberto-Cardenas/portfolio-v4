@@ -54,6 +54,7 @@ p, ul {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+     object-position: center top;
 }
 .panel.text-panel {
   padding: 0.8em 0.5em;
@@ -129,7 +130,7 @@ p, ul {
     grid-template-rows: auto;
     -moz-column-gap: 1em;
          column-gap: 1em;
-    grid-template-areas: "splash splash" "description1 title" "description1 image1" "description1 image2" "description2 description2";
+    grid-template-areas: "splash splash" "description1 title" "description1 description2" "image1 description2" "image2 description2";
   }
   .panel.text-panel {
     padding: 1em 1em;
@@ -197,18 +198,21 @@ p, ul {
   }
 }
 @media only screen and (min-width: 1024px) {
-  #page {
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-areas: "description1 description1 description1 description1 description1 splash splash splash splash splash splash splash" "description2 description2 description2 description2 description2 title title title title title title title" "description2 description2 description2 description2 description2 image1 image1 image1 image1 image1 image1 image1" "description2 description2 description2 description2 description2 image2 image2 image2 image2 image2 image2 image2";
+  #splash {
+    height: 30em;
+  }
+  #splash .splash-title {
+    left: 5em;
+    width: calc(30em + 6px);
   }
   .panel.text-panel h3 {
     font-size: 1.8rem;
   }
   .panel.text-panel p {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
   }
   .panel.text-panel ul {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
   }
   .panel.img-panel .image-title p {
     font-size: 1.5rem;

@@ -67,10 +67,12 @@
   </div>
 
   <!-- Image 2 -->
-  <div id="image2" class="panel img-panel">
-    <div class="image-title">
-      <p>{{ project['image2']['title'] }}</p>
+  {% if 'image2' in project: %}
+    <div id="image2" class="panel img-panel">
+      <div class="image-title">
+        <p>{{ project['image2']['title'] }}</p>
+      </div>
+      <img src="{{ url_for('static', filename='images/' + project['image2']['filename']) }}" alt="project['image2']['alt']">
     </div>
-    <img src="{{ url_for('static', filename='images/' + project['image2']['filename']) }}" alt="project['image2']['alt']">
-  </div>
+  {% endif %}
 {% endblock %}
