@@ -3,7 +3,7 @@
     {
       "title": "Izzy Davies Design",
       "shortDescription": "Design Portfolio for Izzy Davies, a Bristol born graphic designer with a passion for using color, composition, and 3d work to create beautiful narrative-led designs.",
-      "languageIcons": ["html.svg", "css.svg"],
+      "languageIcons": ["html.svg", "sass.svg"],
       "thumbnail": {
         "filename": "izzyDaviesDesignSplash.jpg",
         "title": "Home Page",
@@ -32,7 +32,7 @@
     {
       "title": "CZ Weekly Menu Website",
       "shortDescription": "Weekly Menu Website for Casa Zimbabwe, a student housing unit that is part of the Berkeley Student Cooperative.",
-      "languageIcons": ["html.svg", "css.svg"],
+      "languageIcons": ["html.svg", "sass.svg"],
       "thumbnail": {
         "filename": "menuWeeklyMenu.jpg",
         "title": "Weekly Menu",
