@@ -1,6 +1,38 @@
 {
   "en": [
     {
+      "title": "Roberto Cardenas Web Portfolio",
+      "shortDescription": "Web Development Portfolio made by myself for myself that you are currently navigating.",
+      "languageIcons": ["html.svg", "sass.svg", "jquery.svg", "flask.svg"],
+      "thumbnail": {
+        "filename": "robertoCardenasPortfolioSplash.jpg",
+        "title": "Original home page design",
+        "alt": "Original home page design"
+      },
+      "description": "When designing this version of my portfolio I really wanted my personality and interests to be communicated through the design, which led to the manga inspired layout you see on the site. I really enjoy how manga communicates storytelling through art and paneling and wanted to see if I could imitate that while still following design principles and having a cohesive responsive website.",
+      "technology": "This fully responsive website was designed in Figma and built using Flask, JQuery, HTML, and Sass.",
+      "features": [
+        "Fully responsive website.",
+        "Home page, projects page, contact page, and about page.",
+        "Simple backend written in Flask that takes care of the routing, templating, and contact form email functionality."
+      ],
+      "contributions": [
+          "Designed all pages in Figma.",
+          "Utilized HTML, JQuery and Sass to build the frontend.",
+          "Utilized Flask as a simple backend that takes care of templating and routing.",
+          "Deployed website to a Heroku and linked a custom domain."
+      ],
+      "image1": {
+        "filename": "robertoCardenasPortfolioOriginalFigma.jpg",
+        "title": "Initial Designs",
+        "alt": "Initial Page Designs"
+      },
+      "links": [
+        {"title": "Github", "link": "https://github.com/Roberto-Cardenas/portfolio/"},
+        {"title": "Figma", "link": "https://www.figma.com/file/DmLSTzI3Bw2kjTSt6cDRoe/Roberto-Portfolio?node-id=0%3A1&t=wKIQjNDr7PGMYDVZ-1"}
+      ]
+    },
+    {
       "title": "Izzy Davies Design",
       "shortDescription": "Design Portfolio for Izzy Davies, a Bristol born graphic designer with a passion for using color, composition, and 3d work to create beautiful narrative-led designs.",
       "languageIcons": ["html.svg", "sass.svg"],
