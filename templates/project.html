@@ -14,9 +14,9 @@
 {% block content %}
   <!-- Splash -->
   <div id="splash" class="panel">
-    <img src="{{ url_for('static', filename='images/' + project['thumbnail']['filename']) }}" alt="project['thumbnail']['alt']">
+    <img src="{{ url_for('static', filename='images/' + project['header']['filename']) }}" alt="project['header']['alt']">
     <div class="splash-title">
-      <p>{{ project['thumbnail']['title'] }}</p>
+      <p>{{ project['header']['title'] }}</p>
     </div>
     <a class="back-btn" href="{{ url_for('projects_bp.index') }}">
       <img src="{{ url_for('static', filename='icons/backarrow.svg') }}" alt="Return to Projects">

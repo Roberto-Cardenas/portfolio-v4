@@ -103,6 +103,17 @@
 }
 
 @media only screen and (min-width: 680px) {
+  .panel#title-card {
+    width: 100%;
+    border: none;
+    transform: translateX(0);
+  }
+  .panel#title-card img.title-bg {
+    outline: 3px solid black;
+    outline-offset: -3px;
+  }
+}
+@media only screen and (min-width: 800px) {
   #projects {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -114,17 +125,8 @@
   #projects .project {
     margin: 0;
   }
-  .panel#title-card {
-    width: 100%;
-    border: none;
-    transform: translateX(0);
-  }
-  .panel#title-card img.title-bg {
-    outline: 3px solid black;
-    outline-offset: -3px;
-  }
 }
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1250px) {
   #projects {
     grid-template-columns: 1fr 1fr 1fr;
   }
