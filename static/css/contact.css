@@ -145,6 +145,7 @@
   .panel .contact-bg {
     width: calc(100% - 4em);
     transform: translateX(4em);
+    object-position: left 20%;
   }
   .panel .contact-panel .title {
     top: 15em;
