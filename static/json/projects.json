@@ -1,40 +1,38 @@
 {
   "en": [
     {
-      "title": "Roberto Cardenas Web Portfolio",
-      "shortDescription": "Web Development Portfolio made by myself for myself that you are currently navigating.",
-      "languageIcons": ["html.svg", "sass.svg", "jquery.svg", "flask.svg"],
+      "title": "Fogón de mi Ma. María",
+      "shortDescription": "El Fogón de mi Ma. Maria is a small restaurant located in Rosarito, Baja California that sells delicious Mexican food at affordable prices.",
+      "languageIcons": ["html.svg", "sass.svg"],
       "thumbnail": {
-        "filename": "robertoCardenasPortfolioSplash.jpg",
-        "title": "Original home page design",
-        "alt": "Original home page design"
+        "filename": "fogon-desktop.jpg",
+        "title": "El Fogon",
+        "alt": "El Fogon"
       },
       "header": {
-        "filename": "robertoCardenasPortfolioSplash.jpg",
-        "title": "Original home page design",
-        "alt": "Original home page design"
+        "filename": "fogon-desktop.jpg",
+        "title": "El Fogon",
+        "alt": "El Fogon"
       },
-      "description": "When designing this version of my portfolio I really wanted my personality and interests to be communicated through design, which led to the manga inspired layout you see on the site. I really enjoy how manga communicates storytelling through art and paneling and wanted to see if I could imitate that while still following design principles and having a cohesive responsive website.",
-      "technology": "This fully responsive website was designed in Figma and built using Flask, JQuery, HTML, and Sass.",
+      "description": "When designing this website I researched other restaurants' websites and took inspiration from how they laid out their hero section, menu and contact information, while simultaneously attempting to maintain the same brand colors and identity of the restaurant.",
+      "technology": "This fully responsive website was designed in Figma and built using HTML and Sass.",
       "features": [
-        "Fully responsive website.",
-        "Home page, projects page, contact page, and about page.",
-        "Simple backend written in Flask that takes care of the routing, templating, and contact form email functionality."
+          "Fully responsive website.",
+          "Font sizes adjust to the users system settings easily."
       ],
       "contributions": [
-          "Designed all pages in Figma.",
-          "Utilized HTML, JQuery and Sass to build the frontend.",
-          "Utilized Flask as a simple backend that takes care of templating and routing.",
-          "Deployed website to a Heroku and linked a custom domain."
+          "Drew initial sketches and final designs in Figma.",
+          "Utilized HTML and Sass to build the website."
       ],
       "image1": {
-        "filename": "robertoCardenasPortfolioOriginalFigma.jpg",
-        "title": "Initial Designs",
-        "alt": "Initial Page Designs"
+        "filename": "fogon-desktop.jpg",
+        "title": "Landing Page",
+        "alt": "Landing Page"
       },
       "links": [
-        {"title": "Github", "link": "https://github.com/Roberto-Cardenas/portfolio/"},
-        {"title": "Figma", "link": "https://www.figma.com/file/DmLSTzI3Bw2kjTSt6cDRoe/Roberto-Portfolio?node-id=0%3A1&t=wKIQjNDr7PGMYDVZ-1"}
+        {"title": "Go to website", "link": "https://elfogondemaria.github.io"},
+        {"title": "Github", "link": "https://github.com/Roberto-Cardenas/fogondemima/"},
+        {"title": "Figma", "link": "https://www.figma.com/file/4M6FGEVcbYrww7PjP4nDsc/Fogon-de-Mi-Ma-Maria?node-id=0%3A1&t=XVHQkektSemMumpa-1"}
       ]
     },
     {
@@ -104,50 +102,6 @@
         {"title": "Go to website", "link": "https://roberto-cardenas.github.io/cz-dinner-menu/"},
         {"title": "Github", "link": "https://github.com/Roberto-Cardenas/cz-dinner-menu/"},
         {"title": "Figma", "link": "https://www.figma.com/file/A2SsFKPMGCMNME3D2i64DN/CZ-Dinner-Menu?node-id=0%3A1&t=KjcppbUuHHQf1tXP-1"}
-      ]
-    },
-    {
-      "title": "CZ Waste Website",
-      "shortDescription": "Waste Information Website for Casa Zimbabwe, a student housing unit that is part of the Berkeley Student Cooperative.",
-      "languageIcons": ["html.svg", "css.svg", "reactjs.svg", "php.svg"],
-      "thumbnail": {
-        "filename": "wasteUserDash.jpg",
-        "title": "User Dashboard",
-        "alt": "The courtyard of Casa Zimbabwe"
-      },
-      "header": {
-        "filename": "wasteUserDash.jpg",
-        "title": "User Dashboard",
-        "alt": "The courtyard of Casa Zimbabwe"
-      },
-      "description": "The unit houses 124 students and produces a massive amount of waste every semester. As the former Waste Reduction Manager, I created this tool to have an accessible way of educating the residents on proper waste sorting practices as well as having an easy to manage educational resource for future WRM’s.",
-      "technology": "Both the user and admin clients are built in ReactJS and are fully responsive. The data is stored in a REST API written in PHP.",
-      "features": [
-          "User client with color coded panels representing each type of waste.",
-          "Admin client for managing content. Panels can be created, deleted, edited, as well as reordered. Same goes for the content within each panel.",
-          "Data stored in fully documented REST API."
-      ],
-      "contributions": [
-          "Drew initial sketches and final designs in Figma.",
-          "Built HTML templates based on designs.",
-          "Utilized ReactJS to build both the user and admin clients.",
-          "Designed and built the REST API from scratch in PHP.",
-          "Tested REST API using Postman.",
-          "Setup hosting for the site on the local server within the housing unit."
-      ],
-      "image1": {
-        "filename": "wasteUserDash.jpg",
-        "title": "Full User Dash",
-        "alt": "Screenshot of user dashboard"
-      },
-      "image2": {
-        "filename": "wasteAdminDash.jpg",
-        "title": "Admin Dash",
-        "alt": "Screenshot of adminitrator dashboard"
-      },
-      "links": [
-        {"title": "Github", "link": "https://github.com/Roberto-Cardenas/cz-waste"},
-        {"title": "Figma", "link": "https://www.figma.com/file/80kIeVcIuhtaSCMUvCU1Od/Waste-Website-CZ?node-id=0%3A1&t=0b3R931EW1YkFGnb-1"}
       ]
     },
     {
